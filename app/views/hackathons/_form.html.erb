@@ -1,0 +1,47 @@
+<%= form_with(model: hackathon, local: true) do |form| %>
+  <% if hackathon.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hackathon.errors.count, "error") %> prohibited this hackathon from being saved:</h2>
+
+      <ul>
+      <% hackathon.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :image_data %>
+    <%= form.text_area :image_data, id: :hackathon_image_data %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :hackathon_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :hackathon_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reward %>
+    <%= form.text_field :reward, id: :hackathon_reward %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_team_count %>
+    <%= form.number_field :max_team_count, id: :hackathon_max_team_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_end %>
+    <%= form.datetime_select :date_end, id: :hackathon_date_end %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
