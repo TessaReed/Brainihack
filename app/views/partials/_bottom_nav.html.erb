@@ -1,0 +1,37 @@
+<nav class="navbar fixed-bottom navbar-light bg-light">
+  <a>
+   <div class="d-inline-block align-top" alt="search">
+    <%= link_to hackathons_path do %>
+     <%=image_tag 'search.png'%>
+    <% end %>
+   </div>
+  </a>
+  <a>
+  <div class = "d-inline-block align-top">
+    <%= link_to teams_path do %>
+     <%=image_tag'team.png' %>
+    <% end %>
+ </div>
+  </a>
+  <a>
+   <div class="d-inline-block align-top" alt="profile">
+      <%= link_to profiles_path do %>
+        <%=image_tag 'profile.png'%>
+      <% end %>
+   </div>
+  </a>
+  <a>
+   <div class="d-inline-block align-top" alt="message">
+    <%= link_to messages_path do %>
+      <%=image_tag 'message.png'%>
+    <% end %>
+  </div>
+  </a>
+  <a>
+   <div class="d-inline-block align-top" alt="file">
+     <%= link_to teams_path do %>
+       <%=image_tag 'file.png'%>
+      <% end %>
+  </div>
+  </a>
+</nav>

@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'registrations'}, :path_names => {
+    :sign_up => 'signup'
+  }
+  resources :sessions, :only => [:new, :create, :destroy]
+  resources :teams
   resources :profiles
   resources :roles
   resources :messages
   resources :hackathons
-  resources :photos, only: [:new, :create, :index, :edit, :update]
   root to: "hackathons#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
