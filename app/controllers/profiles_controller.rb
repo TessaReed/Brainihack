@@ -10,6 +10,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.json
   def show
+    @profile = Profile.find_by(user: current_user)
   end
 
   # GET /profiles/new
@@ -25,6 +26,7 @@ class ProfilesController < ApplicationController
   # POST /profiles.json
   def create
     @profile = Profile.new(profile_params)
+    @profile.user = current_user
 
     respond_to do |format|
       if @profile.save
@@ -69,6 +71,8 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:name, :surname, :avatar_data, :description, :profession, :user_id)
+      params.require(:profile).permit(:name, :surname, :avatar,  :description, :profession, :user_id)
     end
+    private
+
 end
