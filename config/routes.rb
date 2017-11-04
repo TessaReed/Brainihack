@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :team_members
   resources :hackathons
+  resources :team_members
   devise_for :users, controllers: { registrations: 'registrations'}, :path_names => {
     :sign_up => 'signup'
   }
