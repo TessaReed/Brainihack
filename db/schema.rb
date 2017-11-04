@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171103065938) do
+ActiveRecord::Schema.define(version: 20171104012145) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "hackathons", force: :cascade do |t|
-    t.text "image_data"
+    t.text "avatar_data"
     t.string "name"
     t.text "description"
     t.decimal "reward"
@@ -46,10 +46,11 @@ ActiveRecord::Schema.define(version: 20171103065938) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "roles", force: :cascade do |t|
+  create_table "team_members", force: :cascade do |t|
     t.string "role_name"
     t.binary "profile_id"
     t.binary "team_id"
+    t.integer "hackathons_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Image data</th>
+      <th>Avatar data</th>
       <th>Name</th>
       <th>Description</th>
       <th>Reward</th>
@@ -18,7 +18,7 @@
   <tbody>
     <% @hackathons.each do |hackathon| %>
       <tr>
-        <td><%= hackathon.image_data %></td>
+        <img src="<%= hackathon.avatar_url %>">
         <td><%= hackathon.name %></td>
         <td><%= hackathon.description %></td>
         <td><%= hackathon.reward %></td>

@@ -27,6 +27,7 @@ class ProfilesController < ApplicationController
   def create
     @profile = Profile.new(profile_params)
     @profile.user = current_user
+    @profile.save
 
     respond_to do |format|
       if @profile.save

@@ -1,7 +1,7 @@
 class CreateHackathons < ActiveRecord::Migration[5.1]
   def change
     create_table :hackathons do |t|
-      t.text :image_data
+      t.text :avatar_data
       t.string :name
       t.text :description
       t.decimal :reward

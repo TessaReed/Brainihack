@@ -1,0 +1,5 @@
+<%= form_for TeamMember.new do |f| %>
+    <%= f.label :role_name %><br>
+    <%= f.select :role_name, [ 'Hipster','Hacker','Hustler' ], :prompt => 'Select One' %>
+    <%= f.submit %>
+<% end %>

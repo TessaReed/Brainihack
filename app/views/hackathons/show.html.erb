@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<strong>Avatar data:</strong>
 <p>
-  <strong>Image data:</strong>
-  <%= @hackathon.image_data %>
+  <img src="<%= @hackathon.avatar_url %>">
 </p>
 
 <p>
@@ -29,6 +29,10 @@
   <strong>Date end:</strong>
   <%= @hackathon.date_end %>
 </p>
+
+
+
+
 
 <%= link_to 'Edit', edit_hackathon_path(@hackathon) %> |
 <%= link_to 'Back', hackathons_path %>
