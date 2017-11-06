@@ -29,4 +29,10 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+
+  <%= form_for TeamMember.new do |f| %>
+      <%= f.label :role %><br>
+      <%= f.select :role, [ 'Hipster','Hacker','Hustler' ], :prompt => 'Select One' %>
+      <%= f.submit %>
+  <% end %>
 <% end %>

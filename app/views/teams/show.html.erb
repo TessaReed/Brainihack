@@ -21,11 +21,8 @@
 </p>
 
 <div class="btn btn-secondary">
-<%= link_to 'Join Team', new_team_member(@hackathon.id), :class => "btn" %>
+<%=link_to 'Join Team', new_team_member_path, :class => "btn" %>
 </div>
-
-<%= link_to 'join', join_team_path(@team) %>
-<%= link_to 'leave', leave_team_path(@team) %>
 
 <%= link_to 'Edit', edit_team_path(@team) %> |
 <%= link_to 'Back', teams_path %>
