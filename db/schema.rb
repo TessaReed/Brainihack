@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171104104724) do
+ActiveRecord::Schema.define(version: 20171106023606) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20171104104724) do
     t.string "team_name3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "profile_id"
+    t.index ["profile_id"], name: "index_hackathons_on_profile_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -44,10 +46,10 @@ ActiveRecord::Schema.define(version: 20171104104724) do
     t.text "avatar_data"
     t.text "description"
     t.string "profession"
-    t.bigint "users_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["users_id"], name: "index_profiles_on_users_id"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "team_members", force: :cascade do |t|
@@ -86,7 +88,8 @@ ActiveRecord::Schema.define(version: 20171104104724) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "profiles", "users", column: "users_id"
+  add_foreign_key "hackathons", "profiles"
+  add_foreign_key "profiles", "users"
   add_foreign_key "team_members", "profiles"
   add_foreign_key "team_members", "teams"
   add_foreign_key "teams", "hackathons", column: "hackathons_id"
