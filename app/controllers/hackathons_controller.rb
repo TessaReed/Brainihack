@@ -29,7 +29,7 @@ class HackathonsController < ApplicationController
 
     respond_to do |format|
     if @hackathon.save
-        format.html { redirect_to @hackathon, notice: 'Hackathon was successfully created.' }
+        format.html { redirect_to new_hackathon_team_path(@hackathon.id), notice: "Hackathon #{@hackathon.name unless @hackathon.name.blank?} was successfully created." }
         format.json { render :show, status: :created, location: @hackathon }
       else
         format.html { render :new }

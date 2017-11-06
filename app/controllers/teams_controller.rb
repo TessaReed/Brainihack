@@ -36,14 +36,21 @@ class TeamsController < ApplicationController
   # POST /teams
   # POST /teams.json
   def create
+    puts "params: #{params.inspect}"
     @team = Team.new(team_params)
+    @team.hackathon_id = params[:team][:hackathon_id]
+
+    puts "@team: #{@team.inspect}"
 
     respond_to do |format|
       if @team.save
         format.html { redirect_to @team, notice: 'Team was successfully created.' }
         format.json { render :show, status: :created, location: @team }
       else
-        format.html { render :new }
+        # format.html { render :new }
+        # we want to re-render the same page since incase there are validation errors
+        # since we need access to the hackathon_id in the url parameters
+        format.html { redirect_to new_hackathon_team_path(@team.hackathon_id) }
         format.json { render json: @team.errors, status: :unprocessable_entity }
       end
     end

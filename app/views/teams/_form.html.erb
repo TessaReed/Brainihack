@@ -15,6 +15,10 @@
     <%= form.text_field :name, id: :team_name %>
   </div>
 
+  <div class="field">
+    <%= form.hidden_field :hackathon_id, :value => params[:hackathon_id] %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
