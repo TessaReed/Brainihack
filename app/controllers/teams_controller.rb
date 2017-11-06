@@ -12,7 +12,7 @@ class TeamsController < ApplicationController
     current_user.update_attribute(:team_id, nil)
     redirect_to @team
   end
-  
+
   # GET /teams
   # GET /teams.json
   def index

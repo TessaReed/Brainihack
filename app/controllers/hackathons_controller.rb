@@ -25,19 +25,18 @@ class HackathonsController < ApplicationController
   # POST /hackathons.json
   def create
     @hackathon = Hackathon.new(hackathon_params)
-  if @hackathon.save
-    redirect_to new_hackathon_team_path
-  end
 
     # respond_to do |format|
-    #   if @hackathon.save
-    #     format.html { redirect_to @hackathon, notice: 'Hackathon was successfully created.' }
-    #     format.json { render :show, status: :created, location: @hackathon }
-    #   else
-    #     format.html { render :new }
-    #     format.json { render json: @hackathon.errors, status: :unprocessable_entity }
-    #   end
-  end
+    if @hackathon.save
+      #   format.html { redirect_to @hackathon, notice: 'Hackathon was successfully created.' }
+      #   format.json { render :show, status: :created, location: @hackathon }
+    redirect_to new_hackathon_team_path(:hackathon_id)
+      # else
+      #   format.html { render :new }
+      #   format.json { render json: @hackathon.errors, status: :unprocessable_entity }
+      # end
+    end
+end
 
 
 
