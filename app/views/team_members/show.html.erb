@@ -1,23 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Role name:</strong>
-  <%= @team_member.role_name %>
-</p>
-
-<p>
   <strong>Profile:</strong>
-  <%= @team_member.profile_id %>
+  <%= @team_member.profile %>
 </p>
 
 <p>
   <strong>Team:</strong>
-  <%= @team_member.team_id %>
+  <%= @team_member.team %>
 </p>
 
 <p>
   <strong>Hackathons:</strong>
-  <%= @team_member.hackathons_id %>
+  <%= @team_member.hackathons %>
 </p>
 
 <%= link_to 'Edit', edit_team_member_path(@team_member) %> |

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171104041610) do
+ActiveRecord::Schema.define(version: 20171104104724) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,12 +50,14 @@ ActiveRecord::Schema.define(version: 20171104041610) do
   end
 
   create_table "team_members", force: :cascade do |t|
-    t.string "role_name"
-    t.binary "profile_id"
-    t.binary "team_id"
-    t.integer "hackathons_id"
+    t.bigint "profile_id"
+    t.bigint "team_id"
+    t.bigint "hackathons_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["hackathons_id"], name: "index_team_members_on_hackathons_id"
+    t.index ["profile_id"], name: "index_team_members_on_profile_id"
+    t.index ["team_id"], name: "index_team_members_on_team_id"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -84,4 +86,7 @@ ActiveRecord::Schema.define(version: 20171104041610) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "team_members", "hackathons", column: "hackathons_id"
+  add_foreign_key "team_members", "profiles"
+  add_foreign_key "team_members", "teams"
 end

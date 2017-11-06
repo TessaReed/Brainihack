@@ -1,4 +1,4 @@
 class Team < ApplicationRecord
-  has_many :roles
-  belongs_to :hackathons
+  has_many :users
+  # belongs_to :hackathon
 end

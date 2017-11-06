@@ -15,7 +15,6 @@ class TeamMembersController < ApplicationController
   # GET /team_members/new
   def new
     @team_member = TeamMember.new
-    @role_name = @team_member.role_name
   end
 
   # GET /team_members/1/edit
@@ -70,6 +69,6 @@ class TeamMembersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def team_member_params
-      params.require(:team_member).permit(:role_name, :profile_id, :team_id, :hackathons_id)
+      params.require(:team_member).permit(:profile_id, :team_id, :hackathons_id)
     end
 end

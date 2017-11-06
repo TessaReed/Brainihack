@@ -1,5 +1,5 @@
 class Profile < ApplicationRecord
-  has_many :roles
   belongs_to :user
+  has_many :teams
   include ImageUploader[:avatar]
 end

@@ -1,6 +1,18 @@
 class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
 
+  def join
+    @team = Team.find params[:id]
+    current_user.update_attribute(:team_id, @team.id)
+    redirect_to @team
+  end
+
+  def leave
+    @team = Team.find params[:id]
+    current_user.update_attribute(:team_id, nil)
+    redirect_to @team
+  end
+  
   # GET /teams
   # GET /teams.json
   def index

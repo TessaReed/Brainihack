@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Team Members</h1>
+
 <table>
   <thead>
     <tr>
-      <th>Role name</th>
       <th>Profile</th>
       <th>Team</th>
       <th>Hackathons</th>
@@ -15,10 +15,9 @@
   <tbody>
     <% @team_members.each do |team_member| %>
       <tr>
-        <td><%= team_member.role_name %></td>
-        <td><%= team_member.profile_id %></td>
-        <td><%= team_member.team_id %></td>
-        <td><%= team_member.hackathons_id %></td>
+        <td><%= team_member.profile %></td>
+        <td><%= team_member.team %></td>
+        <td><%= team_member.hackathons %></td>
         <td><%= link_to 'Show', team_member %></td>
         <td><%= link_to 'Edit', edit_team_member_path(team_member) %></td>
         <td><%= link_to 'Destroy', team_member, method: :delete, data: { confirm: 'Are you sure?' } %></td>

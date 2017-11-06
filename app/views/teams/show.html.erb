@@ -20,5 +20,8 @@
   <%= @team.description %>
 </p>
 
+<%= link_to 'join', join_team_path(@team) %>
+<%= link_to 'leave', leave_team_path(@team) %>
+
 <%= link_to 'Edit', edit_team_path(@team) %> |
 <%= link_to 'Back', teams_path %>
