@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
 
 resources :hackathons do
-  resources :teams
+  resources :teams do
+    resources :team_members
+  end
 end
 
   devise_for :users, controllers: { registrations: 'registrations'}, :path_names => {
@@ -11,15 +13,16 @@ end
   }
   resources :sessions, :only => [:new, :create, :destroy]
   resources :messages
-
-  get "profiles/new"
   resources :profiles
-  resources :teams do
-    member do
-      get 'join'
-      get 'leave'
-    end
-  end
+
+  # get "profiles/new"
+  # resources :profiles
+  # resources :teams do
+  #   member do
+  #     get 'join'
+  #     get 'leave'
+  #   end
+  # end
   root to: "hackathons#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

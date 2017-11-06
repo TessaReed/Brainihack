@@ -15,6 +15,7 @@ class TeamMembersController < ApplicationController
   # GET /team_members/new
   def new
     @team_member = TeamMember.new
+
   end
 
   # GET /team_members/1/edit
@@ -25,6 +26,8 @@ class TeamMembersController < ApplicationController
   # POST /team_members.json
   def create
     @team_member = TeamMember.new(team_member_params)
+    # @team_member.profile_id = current_user.id
+
 
     respond_to do |format|
       if @team_member.save
