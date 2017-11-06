@@ -15,7 +15,7 @@ end
   get "profiles/new"
   resources :profiles
   resources :teams do
-    :member do
+    member do
       get 'join'
       get 'leave'
     end

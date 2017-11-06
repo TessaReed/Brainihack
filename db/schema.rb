@@ -28,7 +28,9 @@ ActiveRecord::Schema.define(version: 20171106030331) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "profile_id"
+    t.bigint "user_id"
     t.index ["profile_id"], name: "index_hackathons_on_profile_id"
+    t.index ["user_id"], name: "index_hackathons_on_user_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -89,6 +91,7 @@ ActiveRecord::Schema.define(version: 20171106030331) do
   end
 
   add_foreign_key "hackathons", "profiles"
+  add_foreign_key "hackathons", "users"
   add_foreign_key "profiles", "users"
   add_foreign_key "team_members", "profiles"
   add_foreign_key "team_members", "teams"
