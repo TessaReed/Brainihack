@@ -10,7 +10,6 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.json
   def show
-    @profile = Profile.find_by(user: current_user)
   end
 
   # GET /profiles/new
@@ -26,8 +25,7 @@ class ProfilesController < ApplicationController
   # POST /profiles.json
   def create
     @profile = Profile.new(profile_params)
-    @profile.user = current_user
-    @profile.save
+
 
     respond_to do |format|
       if @profile.save

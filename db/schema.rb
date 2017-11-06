@@ -44,29 +44,29 @@ ActiveRecord::Schema.define(version: 20171104104724) do
     t.text "avatar_data"
     t.text "description"
     t.string "profession"
-    t.integer "user_id"
+    t.bigint "users_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["users_id"], name: "index_profiles_on_users_id"
   end
 
   create_table "team_members", force: :cascade do |t|
     t.bigint "profile_id"
     t.bigint "team_id"
-    t.bigint "hackathons_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["hackathons_id"], name: "index_team_members_on_hackathons_id"
     t.index ["profile_id"], name: "index_team_members_on_profile_id"
     t.index ["team_id"], name: "index_team_members_on_team_id"
   end
 
   create_table "teams", force: :cascade do |t|
-    t.integer "hackathon_id"
+    t.bigint "hackathons_id"
     t.text "file"
     t.string "name"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["hackathons_id"], name: "index_teams_on_hackathons_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -86,7 +86,8 @@ ActiveRecord::Schema.define(version: 20171104104724) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "team_members", "hackathons", column: "hackathons_id"
+  add_foreign_key "profiles", "users", column: "users_id"
   add_foreign_key "team_members", "profiles"
   add_foreign_key "team_members", "teams"
+  add_foreign_key "teams", "hackathons", column: "hackathons_id"
 end

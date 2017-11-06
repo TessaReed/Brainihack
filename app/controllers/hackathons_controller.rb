@@ -26,7 +26,7 @@ class HackathonsController < ApplicationController
   def create
     @hackathon = Hackathon.new(hackathon_params)
   if @hackathon.save
-    redirect_to new_team_path
+    redirect_to new_hackathon_team_path
   end
 
     # respond_to do |format|
