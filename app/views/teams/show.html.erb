@@ -20,6 +20,12 @@
   <%= @team.description %>
 </p>
 
+<div class="field">
+  <%= form.hidden_field :hackathon_id, :value => params[:hackathon_id] %>
+  <%= form.hidden_field :team_id, :value => params[:team_id] %>
+</div>
+
+
 <div class="btn btn-secondary">
 <%=link_to 'Join Team', new_team_member_path, :class => "btn" %>
 </div>

@@ -11,22 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :profile_id %>
-    <%= form.text_field :profile_id, id: :team_member_profile_id %>
-  </div>
 
-  <div class="field">
-    <%= form.label :team_id %>
-    <%= form.text_field :team_id, id: :team_member_team_id %>
-  </div>
+  <%= form.hidden_field :profile_id, :value => current_user.profile.id %>
 
-  <div class="field">
-    <%= form.label :hackathons_id %>
-    <%= form.text_field :hackathons_id, id: :team_member_hackathons_id %>
-  </div>
+
+  <%= form.hidden_field :team_id, :value => team_id %>
+<%= form.hidden_field :role, :value => role %>
+
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Create #{role}" %>
   </div>
 <% end %>

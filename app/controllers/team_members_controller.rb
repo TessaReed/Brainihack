@@ -26,7 +26,7 @@ class TeamMembersController < ApplicationController
   # POST /team_members.json
   def create
     @team_member = TeamMember.new(team_member_params)
-    # @team_member.profile_id = current_user.id
+    @team_member.save
 
 
     respond_to do |format|
@@ -72,6 +72,6 @@ class TeamMembersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def team_member_params
-      params.require(:team_member).permit(:profile_id, :team_id, :hackathons_id)
+      params.require(:team_member).permit(:profile_id, :team_id, :hackathons_id, :role)
     end
 end

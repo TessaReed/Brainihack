@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<% team_member = @team_member %>
 <p>
   <strong>Avatar data:</strong>
   <img src="<%= @hackathon.avatar_url %>">
@@ -37,6 +37,40 @@
   <%= link_to 'Hackathon Teams', hackathon_team_path(@hackathon.id), :class => "btn" %>
   </div>
 </p>
+<div>
+<% @hackathon_teams.each do |team| %>
+<% team_members = team.team_members %>
+
+<h1> <%= team.name %> </h1>
+  <br />
+
+  <% if team_members.where(role: 'hipster').empty? == false %>
+    <h2> The Hipster is: <%= team_members.where(role: 'hipster').first.profile.name %> !</h2>
+    <br />
+    <% else %>
+      Hipster
+      <%= render 'team_form', team_member: team_member, team_id: team.id, hackathons_id: @hackathon.id, role: 'hipster' %>
+  <% end %>
+
+  <% if team_members.where(role: 'hacker').empty? == false %>
+  <h2> The Hacker is: <%= team_members.where(role: 'hacker').first.profile.name %> !</h2>
+  <br />
+    <% else %>
+      Hacker
+      <%= render 'team_form', team_member: team_member, team_id: team.id, hackathons_id: @hackathon.id, role: 'hacker' %>
+  <% end %>
+
+  <% if team_members.where(role: 'hustler').empty? == false %>
+  <h2> The Hustler is: <%= team_members.where(role: 'hustler').first.profile.name %> !</h2>
+  <br />
+    <% else %>
+      Hustler
+      <%= render 'team_form', team_member: team_member, team_id: team.id, hackathons_id: @hackathon.id, role: 'hustler' %>
+  <% end %>
+
+<% end %>
+<br />
+</div>
 
 <!-- <p>
   <strong>Team name1:</strong>

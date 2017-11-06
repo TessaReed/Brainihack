@@ -1,15 +1,19 @@
 class HackathonsController < ApplicationController
-  before_action :set_hackathon, only: [:show, :edit, :update, :destroy]
+  before_action :set_hackathon, only: [:show, :edit, :update, :destroy, :index]
+
 
   # GET /hackathons
   # GET /hackathons.json
   def index
     @hackathons = Hackathon.all
+
   end
 
   # GET /hackathons/1
   # GET /hackathons/1.json
   def show
+    @hackathon_teams = @hackathon.teams
+    @team_member = TeamMember.new
   end
 
   # GET /hackathons/new
@@ -74,4 +78,5 @@ class HackathonsController < ApplicationController
     def hackathon_params
       params.require(:hackathon).permit(:avatar, :name, :description, :reward, :max_team_count, :date_end, :team_name1, :team_name2, :team_name3)
     end
+
 end
