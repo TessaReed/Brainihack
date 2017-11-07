@@ -33,11 +33,6 @@
 <p>
   <strong>Choose a team to join</strong>
 
-  <div class="btn btn-secondary">
-  <%= link_to 'Hackathon Teams', hackathon_team_path(@hackathon.id), :class => "btn" %>
-  </div>
-</p>
-<div>
 <% @hackathon_teams.each do |team| %>
 <% team_members = team.team_members %>
 

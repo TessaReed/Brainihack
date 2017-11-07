@@ -40,7 +40,7 @@ class TeamsController < ApplicationController
 
     respond_to do |format|
       if @team.save
-        format.html { redirect_to hackathon_team_path(@team.hackathon_id, @team.id), notice: 'Team was successfully created.' }
+        format.html { redirect_to hackathon_path(@team.hackathon_id), notice: 'Team was successfully created.' }
         format.json { render :show, status: :created, location: @team }
       else
         # format.html { render :new }

@@ -1,15 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Profile:</strong>
-  <%= @team_member.profile %>
+  <strong>Hello:</strong>
+  <%= @team_member.profile.name %>
 </p>
 
 <p>
-  <strong>Team:</strong>
-  <%= @team_member.team %>
+  <strong>You are now on this team:</strong>
+  <%= @team_member.team.name %>
 </p>
 
+<p>
+  <strong>For this Hackathon:</strong>
+  <%= @team_member.team.hackathon.name %>
+</p>
+
+<p>
+  <strong>Your role is:</strong>
+  <%= @team_member.role %>
+</p>
 
 <%= link_to 'Edit', edit_team_member_path(@team_member) %> |
 <%= link_to 'Back', team_members_path %>

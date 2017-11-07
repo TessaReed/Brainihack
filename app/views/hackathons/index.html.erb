@@ -2,10 +2,12 @@
 
 <h1>Hackathons</h1>
 
+<% @hackathons.each do |hackathon| %>
+<div class="card" style="width: 40rem;">
+  <div class="card-block">
 <table>
   <thead>
     <tr>
-      <th>Avatar data</th>
       <th>Name</th>
       <th>Description</th>
       <th>Reward</th>
@@ -14,23 +16,26 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
-    <% @hackathons.each do |hackathon| %>
-      <tr>
-        <img src="<%= hackathon.avatar_url %>">
-        <td><%= hackathon.name %></td>
-        <td><%= hackathon.description %></td>
-        <td><%= hackathon.reward %></td>
-        <td><%= hackathon.max_team_count %></td>
-        <td><%= hackathon.date_end %></td>
-        <td><%= link_to 'Show', hackathon %></td>
-        <td><%= link_to 'Edit', edit_hackathon_path(hackathon) %></td>
-        <td><%= link_to 'Destroy', hackathon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <tr>
+          <img src="<%= hackathon.avatar_url %>">
+          <td><%= hackathon.name %></td>
+          <td><%= hackathon.description %></td>
+          <td><%= hackathon.reward %></td>
+          <td><%= hackathon.max_team_count %></td>
+          <td><%= hackathon.date_end %></td>
+          <td><%= link_to 'Show', hackathon %></td>
+          <td><%= link_to 'Edit', edit_hackathon_path(hackathon) %></td>
+          <td><%= link_to 'Destroy', hackathon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+
+      </div>
+    </div>
+    </tbody>
+  </table>
+</div>
+</div>
+  <% end %>
 
 <br>
 
