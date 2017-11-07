@@ -1,10 +1,11 @@
 class HackathonsController < ApplicationController
-  before_action :set_hackathon, only: [:show, :edit, :update, :destroy]
+  before_action :set_hackathon, only: [ :show, :edit, :update, :destroy]
 
   # GET /hackathons
   # GET /hackathons.json
   def index
     @hackathons = Hackathon.all
+    # @hackathons = Hackathon.find(params[:id])
   end
 
   # GET /hackathons/1

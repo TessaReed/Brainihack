@@ -1,34 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @profile.name %>
-</p>
-
-<p>
-  <strong>Surname:</strong>
-  <%= @profile.surname %>
-</p>
-
-<p>
-  <strong>Avatar data:</strong>
-  <p>
-    <img src="<%= @profile.avatar_url %>">
-  </p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @profile.description %>
-</p>
-
-<p>
-  <strong>Profession:</strong>
-  <%= @profile.profession %>
-</p>
-
-<!-- if user is part of a team, show the team here else show you should join teams. -->
-
-
+<div class="card" style="width: 20rem;">
+  <img class ="profile" src="<%= @profile.avatar_url %>">
+  <div class="card-block">
+    <h4 class="card-title">  <%= @profile.profession %> </h4>
+    <p class="card-text">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"> <%= @profile.name %> <%= @profile.surname %> </p></li>
+      </ul>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+    Bio:
+      <%= @profile.description %> </p></li>
+  </ul>
+</div>
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>

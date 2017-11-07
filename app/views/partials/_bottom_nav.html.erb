@@ -2,35 +2,35 @@
   <a>
    <div class="d-inline-block align-top" alt="search">
     <%= link_to hackathons_path do %>
-     <%=image_tag 'search.png'%>
+     <%=image_tag('search.png', class: "icon")%>
     <% end %>
    </div>
   </a>
   <a>
   <div class = "d-inline-block align-top">
     <%= link_to hackathons_path do %>
-     <%=image_tag'team.png' %>
+     <%=image_tag('team.png', class: "icon")%>
      <% end %>
  </div>
   </a>
   <a>
    <div class="d-inline-block align-top" alt="profile">
       <%= link_to profile_path(current_user.id)  do %>
-        <%=image_tag 'profile.png'%>
+        <%=image_tag('profile.png', class: "icon")%>
       <% end %>
    </div>
   </a>
   <a>
    <div class="d-inline-block align-top" alt="message">
     <%= link_to messages_path do %>
-      <%=image_tag 'message.png'%>
+      <%=image_tag('message.png', class: "icon")%>
     <% end %>
   </div>
   </a>
   <a>
    <div class="d-inline-block align-top" alt="file">
      <%= link_to team_members_path do %>
-       <%=image_tag 'file.png'%>
+       <%=image_tag('file.png', class: "icon")%>
       <% end %>
   </div>
   </a>
