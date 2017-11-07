@@ -14,15 +14,8 @@ end
   resources :sessions, :only => [:new, :create, :destroy]
   resources :messages
   resources :profiles
+  resources :charges
 
-  # get "profiles/new"
-  # resources :profiles
-  # resources :teams do
-  #   member do
-  #     get 'join'
-  #     get 'leave'
-  #   end
-  # end
   root to: "hackathons#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

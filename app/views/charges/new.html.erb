@@ -1,25 +1,3 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Hello:</strong>
-  <%= @team_member.profile.name %>
-</p>
-
-<p>
-  <strong>You are now on this team:</strong>
-  <%= @team_member.team.name %>
-</p>
-
-<p>
-  <strong>For this Hackathon:</strong>
-  <%= @team_member.team.hackathon.name %>
-</p>
-
-<p>
-  <strong>Your role is:</strong>
-  <%= @team_member.role %>
-</p>
-
 <%= form_tag charges_path do %>
   <article>
     <% if flash[:error].present? %>
@@ -38,7 +16,3 @@
           data-amount="500"
           data-locale="auto"></script>
 <% end %>
-
-
-<%= link_to 'Edit', edit_team_member_path(@team_member) %> |
-<%= link_to 'Back', team_members_path %>

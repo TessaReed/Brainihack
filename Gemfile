@@ -5,6 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'cloudinary', '~>1.6'
+gem 'shrine-cloudinary','~>0.5.0'
+#stripe gem for payments
+gem 'stripe'
 #shrine for uploading images and files.
 gem "shrine"
 #bootstrap for styles

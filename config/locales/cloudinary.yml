@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dshckrmfg
+  api_key: '141163464621466'
+  api_secret: QEQmy8HGzqollGsYcX3RlD-Bgfc
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dshckrmfg
+  api_key: '141163464621466'
+  api_secret: QEQmy8HGzqollGsYcX3RlD-Bgfc
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dshckrmfg
+  api_key: '141163464621466'
+  api_secret: QEQmy8HGzqollGsYcX3RlD-Bgfc
+  enhance_image_tag: true
+  static_image_support: false
