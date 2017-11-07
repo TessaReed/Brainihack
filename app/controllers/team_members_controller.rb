@@ -15,7 +15,6 @@ class TeamMembersController < ApplicationController
   # GET /team_members/new
   def new
     @team_member = TeamMember.new
-
   end
 
   # GET /team_members/1/edit

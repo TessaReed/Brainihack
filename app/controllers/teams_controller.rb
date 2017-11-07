@@ -22,6 +22,7 @@ class TeamsController < ApplicationController
   # GET /teams/new
   def new
     @team = Team.new
+    @hackathon = Hackathon.find(params[:hackathon_id])
   end
 
   # GET /teams/1/edit
@@ -39,7 +40,7 @@ class TeamsController < ApplicationController
 
     respond_to do |format|
       if @team.save
-        format.html { redirect_to @team, notice: 'Team was successfully created.' }
+        format.html { redirect_to hackathon_team_path(@team.hackathon_id, @team.id), notice: 'Team was successfully created.' }
         format.json { render :show, status: :created, location: @team }
       else
         # format.html { render :new }

@@ -1,12 +1,10 @@
 class HackathonsController < ApplicationController
-  before_action :set_hackathon, only: [:show, :edit, :update, :destroy, :index]
-
+  before_action :set_hackathon, only: [:show, :edit, :update, :destroy]
 
   # GET /hackathons
   # GET /hackathons.json
   def index
     @hackathons = Hackathon.all
-
   end
 
   # GET /hackathons/1
@@ -71,12 +69,17 @@ class HackathonsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_hackathon
-      @hackathon = Hackathon.find(params[:id])
+      if params[:hackathons_id].present?
+        id = params[:hackathons_id]
+      elsif params[:id].present?
+        id = params[:id]
+      end
+      @hackathon = Hackathon.find(id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def hackathon_params
-      params.require(:hackathon).permit(:avatar, :name, :description, :reward, :max_team_count, :date_end, :team_name1, :team_name2, :team_name3)
+      params.require(:hackathon).permit(:avatar, :name, :description, :reward, :max_team_count, :date_end, :team_name1, :team_name2, :team_name3, :user_id)
     end
 
 end
