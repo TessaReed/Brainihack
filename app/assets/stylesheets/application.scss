@@ -50,11 +50,52 @@ img.profile {
   margin-top: 40px;
 }
 
+img.hackathon-img {
+  display: block;
+  margin: 0 auto;
+  border:1px solid black;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 40px;
+}
+
+img.logo_small {
+  width: 80px;
+}
 
 .card {
   margin-bottom: 30px;
 }
 
 .hackathon-img {
+
+}
+
+h4.profession-title { margin-left: 20px;
+}
+
+.card {
+    margin-bottom: 30px;
+    margin-top: 40px;
+    border: 1px solid;
+    border-color: #868e96;
+
+}
+
+.navbar {
+  background-color: #9CEC5B;
+}
+
+.span.navbar.toggler-icon {
+  color: #533A71;
+}
+
+.btn-outline-secondary {
+  background-color: #F0F465;
+  // border-color: #533A71;
+  display: block;
+  margin: 0 auto;
+  color: #533A71;
 
 }
