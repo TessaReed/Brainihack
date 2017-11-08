@@ -7,11 +7,12 @@ class HackathonsController < ApplicationController
     @hackathons = Hackathon.all
     # @hackathons = Hackathon.find(params[:id])
     @hackathons = if params[:term]
-    Hackathon.where('name LIKE ?', "%#{params[:term]}%")
+      Hackathon.where('name LIKE ?', "%#{params[:term]}%")
     else
-    Hackathon.all
+     Hackathon.all
     end
   end
+
 
   # GET /hackathons/1
   # GET /hackathons/1.json
