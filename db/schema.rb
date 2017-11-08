@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171108051805) do
+ActiveRecord::Schema.define(version: 20171108114141) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,14 +32,13 @@ ActiveRecord::Schema.define(version: 20171108051805) do
     t.decimal "reward"
     t.integer "max_team_count"
     t.datetime "date_end"
-    t.string "team_name1"
-    t.string "team_name2"
-    t.string "team_name3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.bigint "profile_id"
     t.string "address"
+    t.float "longitude"
+    t.float "latitude"
     t.index ["profile_id"], name: "index_hackathons_on_profile_id"
     t.index ["user_id"], name: "index_hackathons_on_user_id"
   end

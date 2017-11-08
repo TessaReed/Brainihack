@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<div class="card" style="width: 20rem;">
+<div class="card-profile">
   <img class ="profile" src="<%= @profile.avatar_url %>">
   <div class="card-block">
     <h4 class="profession-title">
@@ -16,7 +16,6 @@
       <%= @profile.description %> </p></li>
     </ul>
   </div>
+  <%= link_to 'Edit', edit_profile_path(@profile) %> |
+  <%= link_to 'Back', profiles_path %>
 </div>
-
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
