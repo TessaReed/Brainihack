@@ -4,6 +4,8 @@ class ProfilesController < ApplicationController
   # GET /profiles
   # GET /profiles.json
   def index
+    @profiles = Profile.all
+
 #this is for messaging.
     session[:conversations] ||= []
     @users = User.all.where.not(id: current_user)
