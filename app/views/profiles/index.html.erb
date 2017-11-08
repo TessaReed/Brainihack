@@ -1,4 +1,5 @@
-<div class="col-md-9">
+<div class="row">
+  <div class="col-md-9">
     <ul id="conversations-list">
       <% @conversations.each do |conversation| %>
         <%= render 'conversations/conversation', conversation: conversation, user: current_user %>
@@ -14,7 +15,7 @@
       <div class="panel-body">
         <ul>
           <% @users.each do |user| %>
-            <li><%= user.email %></li>
+            <li><%= link_to user.email, conversations_path(user_id: user), remote: true, method: :post %></li>
           <% end %>
         </ul>
       </div>

@@ -2,6 +2,11 @@
 
 <h1>Hackathons</h1>
 
+<%= form_tag(hackathons_path, method: :get) do %>
+  <%= text_field_tag :term %>
+  <%= submit_tag 'Search' %>
+<% end %>
+
 <% @hackathons.each do |hackathon| %>
 <div class="card" style="width: 20rem;">
   <img class="hackathon-img" src="<%= hackathon.avatar_url %>" alt="Card image cap">
