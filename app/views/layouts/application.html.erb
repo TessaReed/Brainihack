@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script async defer src=“https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=initMap“></script>
+    <script async defer src=“https://maps.googleapis.com/maps/api/js?key=AIzaSyARnE2Kn50_ZU2esdEqBcD9De5jOc8EeQs&callback=initMap“></script>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <title>Brainihack</title>
@@ -12,10 +12,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
     <body>
-    <%= render 'partials/nav' if user_signed_in? %>
+
     <div class="container">
+      <%= render 'partials/nav' if user_signed_in? %>
     <%= yield %>
-    <%= render 'partials/bottom_nav' if user_signed_in? %>
     </div>
+    <%= render 'partials/bottom_nav' if user_signed_in? %>
   </body>
 </html>

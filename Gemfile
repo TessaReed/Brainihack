@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#
+gem 'dotenv-rails', groups: [:development, :test]
 #allows you to show a location on a map.
 gem 'geocoder'
 #cloudinary gem to save images to the cloud.
