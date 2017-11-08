@@ -19,7 +19,6 @@ class HackathonsController < ApplicationController
   def show
     @hackathon_teams = @hackathon.teams
     @team_member = TeamMember.new
-    
   end
 
   # GET /hackathons/new
@@ -35,6 +34,7 @@ class HackathonsController < ApplicationController
   # POST /hackathons.json
   def create
     @hackathon = Hackathon.new(hackathon_params)
+    @hackathon.user_id = current_user
     @hackathon.profile_id = current_user.profile.id
 
     respond_to do |format|
@@ -47,7 +47,6 @@ class HackathonsController < ApplicationController
       end
     end
   end
-
 
 
   # PATCH/PUT /hackathons/1
