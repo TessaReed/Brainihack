@@ -10,13 +10,13 @@
         <li class="list-group-item"> <%= @profile.name %> <%= @profile.surname %> </p></li>
       </ul>
   </div>
+  <div class="card-block">
+    <li class="list-group-item">
+    Bio:
+      <%= @profile.description %> </p></li>
+    </ul>
+  </div>
 </div>
 
-<div class="card">
-  <li class="list-group-item">
-  Bio:
-    <%= @profile.description %> </p></li>
-  </ul>
-</div>
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>
