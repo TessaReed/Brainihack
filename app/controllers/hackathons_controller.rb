@@ -17,6 +17,7 @@ class HackathonsController < ApplicationController
   # GET /hackathons/1
   # GET /hackathons/1.json
   def show
+    @hackathon.id = Hackathon.find(params[:id])
     @hackathon_teams = @hackathon.teams
     @team_member = TeamMember.new
   end
@@ -86,7 +87,7 @@ class HackathonsController < ApplicationController
     #   elsif params[:id].present?
     #     id = params[:id]
     #   end
-    #   @hackathon = Hackathon.find(:id)
+    #   @hackathon = Hackathon.id
     # end
 
     # Never trust parameters from the scary internet, only allow the white list through.

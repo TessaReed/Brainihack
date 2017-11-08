@@ -21,16 +21,33 @@
 }
 
 body{
-    padding-top: 65px; 
+    padding-top: 65px;
     margin:0px;
     padding:0px;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container {
+    margin-top: 60px;
+}
+// styling for sign in and sign up
+.center {
+    text-align: center;
+}
+
+.sign-in-center {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.center form {
+    display:inline-block;
 }
 
 .logo {
   display: block;
   margin: auto;
-  height: 800px;
+  height: 200px;
 }
 
 img.hackathon-img {
@@ -92,14 +109,6 @@ h4.profession-title { margin-left: 20px;
   color: #533A71;
 }
 
-.btn-outline-secondary {
-  background-color: #F0F465;
-  // border-color: #533A71;
-  display: block;
-  margin: 0 auto;
-  color: #533A71;
-
-}
 
 ul {
   padding-left: 0px;
@@ -131,4 +140,26 @@ ul {
   margin: 5px 20px;
   padding: 10px;
   float: left;
+}
+
+// styling buttons
+.btn.btn-secondary {
+  color: #F0F465;
+  background-color: #9CEC5B;
+  border-color: #F0F465;
+  display: block;
+  margin: 0 auto;
+  line-height: 1.25;
+  text-align: center;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.btn-outline-secondary {
+  background-color: #F0F465;
+  border-color: #F0F465;
+  display: block;
+  margin: 0 auto;
+  color: #533A71;
+  width: 200px;
 }

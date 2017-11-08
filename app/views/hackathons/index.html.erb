@@ -5,18 +5,20 @@
   <%= submit_tag 'Search', name: nil %>
 <% end %>
 
-<h1>Hackathons</h1>
+<div class="d-flex justify-content-center">
+  <h1>Hackathons</h1>
 
-<% @hackathons.each do |hackathon| %>
-<div class="card" style="width: 20rem;">
-  <img class="hackathon-img" src="<%= hackathon.avatar_url %>" alt="Card image cap">
-  <div class="card-body">
-    <h4 class="card-title"><%= hackathon.name %></h4>
-    <p class="card-text"><%= hackathon.reward %></p>
-    <div class="btn btn-outline-secondary">
-    <%= link_to "Join Hackathon", hackathon_path(:id) %>
+  <% @hackathons.each do |hackathon| %>
+  <div class="card" style="width: 20rem;">
+    <img class="hackathon-img" src="<%= hackathon.avatar_url %>" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="card-title"><%= hackathon.name %></h4>
+      <p class="card-text"><%= hackathon.reward %></p>
+      <div class="btn btn-outline-secondary">
+      <%= link_to "Join Hackathon", hackathon_path(:id) %>
+      </div>
     </div>
   </div>
+    <% end %>
+  <br>
 </div>
-  <% end %>
-<br>
