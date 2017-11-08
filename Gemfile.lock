@@ -76,6 +76,7 @@ GEM
     faraday (0.13.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
+    geocoder (1.4.4)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     http-cookie (1.0.3)
@@ -217,6 +218,7 @@ DEPENDENCIES
   cloudinary (~> 1.6)
   coffee-rails (~> 4.2)
   devise
+  geocoder
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)

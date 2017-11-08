@@ -67,6 +67,9 @@
 <br />
 </div>
 
+<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@hackathon.latitude},#{@hackathon.longitude}&markers=#{@hackathon.latitude},#{@hackathon.longitude}&zoom=7&size=640x400&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8",
+              class: 'img-fluid img-rounded', alt: "#{@hackathon.name} on the map"%>
+
 <!-- <p>
   <strong>Team name1:</strong>
   <%= @hackathon.team_name1 %>
@@ -81,6 +84,15 @@
   <strong>Team name3:</strong>
   <%= @hackathon.team_name3 %>
 </p> -->
+<header><h1 class="display-4">Add Place</h1></header>
+<div class="card">
+  <div class="card-block">
+    <ul>
+      <%= render 'places/form' %>
+    </ul>
+  </div>
+</div>
+
 
 <%= link_to 'Back', hackathons_path %>
 

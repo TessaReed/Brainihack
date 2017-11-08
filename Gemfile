@@ -5,6 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#allows you to show a location on a map.
+gem 'geocoder'
+#cloudinary gem to save images to the cloud.
 gem 'cloudinary', '~>1.6'
 gem 'shrine-cloudinary','~>0.5.0'
 #stripe gem for payments
