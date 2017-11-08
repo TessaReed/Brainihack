@@ -12,7 +12,7 @@
       <h4 class="card-title">Name: <%= hackathon.name %></h4>
       <p class="card-text">Reward: <%= hackathon.reward %></p>
       <div class="btn btn-outline-secondary">
-      <%= link_to "Join Hackathon", hackathon_path(:id) %>
+      <%= link_to "Join Hackathon", hackathon_path(id: hackathon.id) %>
       </div>
     </div>
   </div>

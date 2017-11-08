@@ -6,7 +6,7 @@
     <h4 class="card-title"><%= profile.name %></h4>
     <p class="card-text"><%= profile.description %></p>
     <div class="btn btn-outline-secondary">
-    <%= link_to "See Profile", profile_path %>
+    <%= link_to "See Profile", profile_path[id: profile.id] %>
     </div>
   </div>
 </div>

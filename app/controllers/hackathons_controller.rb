@@ -17,7 +17,6 @@ class HackathonsController < ApplicationController
   # GET /hackathons/1
   # GET /hackathons/1.json
   def show
-    # @hackathon.id = Hackathon.find(params[:id])
     @hackathon_teams = @hackathon.teams
     @team_member = TeamMember.new
   end
