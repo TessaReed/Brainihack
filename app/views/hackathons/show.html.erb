@@ -1,3 +1,4 @@
+<div class ="center">
 <p id="notice"><%= notice %></p>
 <% team_member = @team_member %>
 <p>
@@ -28,13 +29,19 @@
   <strong>Date end:</strong>
   <%= @hackathon.date_end %>
 </p>
+
+<p>
   <strong>Team Name:</strong>
+</p>
 <% @hackathon_teams.each do |team| %>
   <% team_members = team.team_members %>
- <h1> <%= team.name %> </h1>
+ <p> <%= team.name %> </p>
+   Hipster? <%=image_tag('hipster.png', class: "icon")%>
+   Hustler? <%=image_tag('devil.png', class: "icon")%>
+   Hacker? <%=image_tag('teacher_blackboard.png', class: "icon")%>
    <br />
    <% if team_members.where(role: 'hipster').empty? == false %>
-     <h2> The Hipster is: <%= team_members.where(role: 'hipster').first.profile.name %> !</h2>
+     <p>  <%=image_tag('hipster.png', class: "icon")%> The Hipster is: <%= team_members.where(role: 'hipster').first.profile.name %> !</p>
      <br />
      <% else %>
        Hipster
@@ -42,7 +49,7 @@
    <% end %>
 
    <% if team_members.where(role: 'hacker').empty? == false %>
-   <h2> The Hacker is: <%= team_members.where(role: 'hacker').first.profile.name %> !</h2>
+   <p> <%=image_tag('teacher_blackboard.png', class: "icon")%> The Hacker is: <%= team_members.where(role: 'hacker').first.profile.name %> !</p>
    <br />
   <% else %>
        Hacker
@@ -50,17 +57,17 @@
    <% end %>
 
    <% if team_members.where(role: 'hustler').empty? == false %>
-   <h2> The Hustler is: <%= team_members.where(role: 'hustler').first.profile.name %> !</h2>
+   <p> <%=image_tag('devil.png', class: "icon")%> The Hustler is: <%= team_members.where(role: 'hustler').first.profile.name %> !</p>
    <br />
      <% else %>
       Hustler
       <%= render 'team_form', team_member: team_member, team_id: team.id, hackathons_id: @hackathon.id, role: 'hustler' %>
    <% end %>
-
    <% end %>
   <br/>
- </div>
 
-<%= link_to 'Back', hackathons_path %>
-<!--  link_to 'Edit', edit_hackathon_path(@hackathon[:id]) -->
-<%= link_to 'Back', hackathons_path %>
+  <%= link_to 'Back', hackathons_path %>
+  <!--  link_to 'Edit', edit_hackathon_path(@hackathon[:id]) -->
+  <%= link_to 'Back', hackathons_path %>
+ </div>
+</div>

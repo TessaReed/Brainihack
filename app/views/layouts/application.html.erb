@@ -12,10 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
     <body>
-    <div class="container">
-      <%= render 'partials/nav' if user_signed_in? %>
+    <%= render 'partials/nav' if user_signed_in? %>
     <%= yield %>
-    </div>
     <%= render 'partials/bottom_nav' if user_signed_in? %>
   </body>
 </html>

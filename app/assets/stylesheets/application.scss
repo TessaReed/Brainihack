@@ -21,9 +21,8 @@
 }
 
 body{
-    padding-top: 65px;
-    margin:0px;
-    padding:0px;
+    padding-top: 40px;
+    padding-bottom: 60px;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -49,6 +48,16 @@ body{
   margin: auto;
   height: 200px;
 }
+
+// styling fonts
+
+h3 {
+  font-size: 1rem;
+}
+
+h4.profession-title { margin-left: 20px;
+}
+// styling images
 
 img.hackathon-img {
   height: 40px;
@@ -82,30 +91,29 @@ img.logo_small {
   width: 80px;
 }
 
+// styling cards
+
 .card {
   margin-bottom: 30px;
 }
 
 
-
-h4.profession-title { margin-left: 20px;
-}
-
 .card-profile {
     border-radius: 5px;
     margin-bottom: 30px;
     margin-top: 40px;
-    border: 1px solid;
-    border-color: #533A71;
+    // border: 1px solid;
+    // border-color: #533A71;
 }
 
-.card {
-    margin-bottom: 30px;
-    margin-top: 40px;
-    border: 1px solid;
-    border-color: #868e96;
-
+.card-hackathon {
+  margin-bottom: 30px;
+  margin-top: 40px;
+  border: 1px solid;
+  border-color: #533A71;
+  border-radius: 5px;
 }
+
 
 .navbar {
   background-color: #9CEC5B;

@@ -9,12 +9,12 @@
   <div class="col-md-3">
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h3 class="panel-title">User list</h3>
+        <h3 class="panel-title"><%= image_tag('mail.png', class: "icon")%></h3>
       </div>
       <div class="panel-body">
         <ul>
           <% @users.each do |user| %>
-            <li><%= user.email %></li>
+            <li><%= user.email.name %></li>
           <% end %>
         </ul>
       </div>

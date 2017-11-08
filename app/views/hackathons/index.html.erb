@@ -1,18 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<%= form_tag(hackathons_path, method: :get) do %>
-  <%= text_field_tag :term, params[:term] %>
-  <%= submit_tag 'Search', name: nil %>
-<% end %>
-
   <h1>Hackathons</h1>
-
+  <%= form_tag(hackathons_path, method: :get) do %>
+    <%= text_field_tag :term, params[:term] %>
+    <%= submit_tag 'Search', name: nil %>
+  <% end %>
   <% @hackathons.each do |hackathon| %>
-  <div class="card" style="width: 20rem;">
+  <div class="card-hackathon">
     <img class="hackathon-img" src="<%= hackathon.avatar_url %>" alt="Card image cap">
     <div class="card-body">
-      <h4 class="card-title"><%= hackathon.name %></h4>
-      <p class="card-text"><%= hackathon.reward %></p>
+      <h4 class="card-title">Name: <%= hackathon.name %></h4>
+      <p class="card-text">Reward: <%= hackathon.reward %></p>
       <div class="btn btn-outline-secondary">
       <%= link_to "Join Hackathon", hackathon_path(:id) %>
       </div>
