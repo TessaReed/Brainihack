@@ -36,9 +36,6 @@
 <% @hackathon_teams.each do |team| %>
   <% team_members = team.team_members %>
  <p> <%= team.name %> </p>
-   Hipster? <%=image_tag('hipster.png', class: "icon")%>
-   Hustler? <%=image_tag('devil.png', class: "icon")%>
-   Hacker? <%=image_tag('teacher_blackboard.png', class: "icon")%>
    <br />
    <% if team_members.where(role: 'hipster').empty? == false %>
      <p>  <%=image_tag('hipster.png', class: "icon")%> The Hipster is: <%= team_members.where(role: 'hipster').first.profile.name %> !</p>
@@ -66,6 +63,8 @@
    <% end %>
   <br/>
 
+  <%= render 'map' %>
+  
   <%= link_to 'Back', hackathons_path %>
   <!--  link_to 'Edit', edit_hackathon_path(@hackathon[:id]) -->
   <%= link_to 'Back', hackathons_path %>
