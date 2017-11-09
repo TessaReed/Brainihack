@@ -1,3 +1,4 @@
+<div class="center">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -20,6 +21,7 @@
   <%= @team_member.role %>
 </p>
 
+<% unless current_user.id == @team_member %>
 
   <%= form_tag charges_path do %>
     <article>
@@ -29,7 +31,7 @@
         </div>
       <% end %>
       <label class="amount">
-        <span>Amount: $5.00</span>
+        <span>Amount:$ <%= @team_member.team.hackathon.reward %> </span>
       </label>
     </article>
 
@@ -37,10 +39,12 @@
     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
             data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
             data-description="A month's subscription"
-            data-amount="500"
+            data-amount=" <%= @team_member.team.hackathon.reward %>"
             data-locale="auto"></script>
   <% end %>
+</div>
 
+<% end %>
 
   <%= link_to 'Edit', edit_team_member_path(@team_member) %> |
   <%= link_to 'Back', team_members_path %>

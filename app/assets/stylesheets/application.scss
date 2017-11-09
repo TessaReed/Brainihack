@@ -71,6 +71,20 @@ font {
   border-color: deepskyblue;
 }
 
+// search bar
+.center-search {
+    display: block;
+    margin: auto;
+}
+
+#input {
+  color: yellow;
+}
+
+#term {
+  border-color: deepskyblue;
+}
+
 .logo {
   display: block;
   margin: auto;
@@ -119,7 +133,6 @@ img.hackathon-img {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  margin-top: 40px;
 }
 
 img.logo_small {
