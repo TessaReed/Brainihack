@@ -29,18 +29,23 @@ body{
 .container {
     margin-top: 60px;
 }
-// styling for sign in and sign up
+
 .center {
+  text-align: center;
+  
+}
+// styling for sign in and sign up
+.sign-up-center {
     text-align: center;
 }
 
-.sign-in-center {
+.profile-center {
     text-align: center;
-    vertical-align: middle;
+    margin-top: 100px;
 }
 
-.center form {
-    display:inline-block;
+#profile_form {
+  border-color: #533A71;
 }
 
 .logo {

@@ -3,8 +3,9 @@
     body {background-color: #9CEC5B;}
   </style>
 </head>
-<div class="sign-in-center">
+<div class="center">
   <%=image_tag 'logo_small.png', :class => "logo"%>
+
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
