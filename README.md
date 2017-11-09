@@ -2,33 +2,33 @@
 
 #The problem and solution.
 
-Design Documentation
-
-[Summary](https://docs.google.com/a/ait.nsw.edu.au/document/d/1V19cIZnVO7e-gunfpClTeKZ7UDwJEamIKU0qbVJqK9U/edit?usp=sharing)
+The bellow summary explains the problem and solutions.  [summary](https://docs.google.com/a/ait.nsw.edu.au/document/d/1V19cIZnVO7e-gunfpClTeKZ7UDwJEamIKU0qbVJqK9U/edit?usp=sharing)
 
 
-- 2 - I wrote user stories on trello to create my product narrative, this helped me fully unpack the desired functionality of Brain-i-hack.
-![User Stories]()
+- 1 - I wrote user stories on trello to create my product narrative, this helped me fully unpack the desired functionality of Brain-i-hack.
+![User stories](https://github.com/TessaReed/Brainihack/blob/master/app/assets/images/readme/user_stories.png)
 
-- 3 - I roughly created a workflow diagram of the user journey/s. This helped me visualise how the user was going to interact with Brain-i-hack and distinguish the hackathon host journey from the hackathon participants.
+![Trello board link:](https://trello.com/b/YoR9berY/branihack)
+
+- 2 - I roughly created a workflow diagram of the user journey/s. This helped me visualise how the user was going to interact with Brain-i-hack and distinguish the hackathon host journey from the hackathon participants.
 
 
 
-- 4 - I used Mockplus to create my Wireframes and mock designs.
-![login]()
-![Signup]()
-![Create_profile]()
-![View_hackathon]()
-![Assigned_team]()
-![Team_home]()
-![List_hackathons]()
-![Reward_team]()
-![Upload_work]()
+- 3 - I used Mockplus to create my Wireframes and mock designs.
+![login](https://github.com/TessaReed/Brainihack/blob/master/app/assets/images/readme/Login.png)
+![Signup](https://github.com/TessaReed/Brainihack/blob/master/app/assets/images/readme/Signup.png)
+![Create_profile](https://github.com/TessaReed/Brainihack/blob/master/app/assets/images/readme/Create_hackathon.png)
+![View_hackathon](https://github.com/TessaReed/Brainihack/blob/master/app/assets/images/readme/View_hackathon.png)
+![Assigned_team](https://github.com/TessaReed/Brainihack/blob/master/app/assets/images/readme/Team.png)
+![Team_home](https://github.com/TessaReed/Brainihack/blob/master/app/assets/images/readme/Team_home.png)
+![List_hackathons](https://github.com/TessaReed/Brainihack/blob/master/app/assets/images/readme/List_hackathon.png)
+![Reward_team](https://github.com/TessaReed/Brainihack/blob/master/app/assets/images/readme/Reward_team.png)
+![Upload_work](https://github.com/TessaReed/Brainihack/blob/master/app/assets/images/readme/Upload_file.png)
 
-- 5 - Entity Relationship Diagram (ERD)
-![ERD]()
+- 4 - Entity Relationship Diagram (ERD)
+![ERD](https://github.com/TessaReed/Brainihack/blob/master/app/assets/images/readme/ERD.png)
 
-- 6 - Project plan and estimation: We were given two weeks to complete a rails two-sided market place. This time frame includes the ideation, planning and building the rails application. Recognising the importance of detailed planning I used the first week to create user stories, my ERD, Wireframes and mock designs. I then used the second week to code the app.
+- 5 - Project plan and estimation: We were given two weeks to complete a rails two-sided market place. This time frame includes the ideation, planning and building the rails application. Recognising the importance of detailed planning I used the first week to create user stories, my ERD, Wireframes and mock designs. I then used the second week to code the app.
 
 
 
