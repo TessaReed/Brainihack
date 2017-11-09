@@ -20,7 +20,7 @@
   <%= @team_member.role %>
 </p>
 
- <% if user_signed_in? && current_user.user_id.profile.team_id? %>
+
   <%= form_tag charges_path do %>
     <article>
       <% if flash[:error].present? %>
@@ -41,9 +41,6 @@
             data-locale="auto"></script>
   <% end %>
 
-  <% else%>
-  <p> you are not allowed to pay people! </p>
-  <%end %>
 
   <%= link_to 'Edit', edit_team_member_path(@team_member) %> |
   <%= link_to 'Back', team_members_path %>

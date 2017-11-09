@@ -11,7 +11,7 @@ The bellow summary explains the problem and solutions.  [summary](https://docs.g
 ![Trello board link:](https://trello.com/b/YoR9berY/branihack)
 
 - 2 - I roughly created a workflow diagram of the user journey/s. This helped me visualise how the user was going to interact with Brain-i-hack and distinguish the hackathon host journey from the hackathon participants.
-
+![User journey/s]()
 
 
 - 3 - I used Mockplus to create my Wireframes and mock designs.
@@ -53,11 +53,9 @@ Demonstrate Ruby on Rails development skills.
 
 # Brain-i-hack
 
-
-
 ## Getting Started
 
-These instructions will get you a rough idea of how to copy the project.
+These instructions will get you an idea of the features I have implemented in the project and some of the gems required to achieve this.
 
 ### Prerequisites
 
@@ -99,6 +97,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* Thank you Coder Academy. :) Especially Luke for putting up with an infinite loop of questions!
+* Thank you to all the contributors to the fantastic gems I used (listed above).
