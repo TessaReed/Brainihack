@@ -1,15 +1,11 @@
-#BEAN THYME
-
- --- This unfortunately Didn't fit the scope of my assignment and had to be put on the back bench
-(pic of app)
-
+#Tessa Reed
 
 #Deliverables
 Design Documentation
 Demonstrate your ability to break down the problem and design a solution.
 
 - 1 - One page summary of your application including problem definition, solution.
-* [Summary](https://docs.google.com/a/ait.nsw.edu.au/document/d/13mxjUNT3aQET6Jh71z_n_RpkSBQhbySZ9jXxI2_yUg0/edit?usp=sharing)
+* [Summary](https://docs.google.com/a/ait.nsw.edu.au/document/d/1V19cIZnVO7e-gunfpClTeKZ7UDwJEamIKU0qbVJqK9U/edit?usp=sharing)
 
 
 - 2 - User stories for the whole application.
@@ -27,14 +23,14 @@ Demonstrate Ruby on Rails development skills.
 - [x]  Demonstrate knowledge of Rails conventions.
 - [x]  Use postgresql database in development.
 - [x] Use an API (eg. Omniauth, Geocoding, Maps, other..).
-- [ ] Use appropriate gems.
-- [ ] Use environmental variables to protect API keys etc. (dotenv)
-- [ ] Implement a payment system for your product. (e.g. Stripe)
+- [X] Use appropriate gems.
+- [X] Use environmental variables to protect API keys etc. (dotenv)
+- [X] Implement a payment system for your product. (e.g. Stripe)
 - [ ] Your app must send transactional emails (eg. using Mailgun).
-- [ ] Your app should have an internal user messaging system.
-- [ ] Your app will have some type of searching, sorting and/or filtering capability.
-- [ ] Your app will have some type of file uploading capability (eg. images).
-- [ ] Your app will have authentication (eg. Devise, must have full functionality in place).
+- [X] Your app should have an internal user messaging system.
+- [X] Your app will have some type of searching, sorting and/or filtering capability.
+- [X] Your app will have some type of file uploading capability (eg. images).
+- [X] Your app will have authentication (eg. Devise, must have full functionality in place).
 - [ ] Your app will have authorisation (users have restrictions on what they can see and edit).
 - [ ] Your app will have an admin dashboard for the admin user to administrate the site.
 - [ ] Document your application with a README that explains how to setup, configure and use your application.
@@ -44,9 +40,9 @@ Demonstrate Ruby on Rails development skills.
 
 
 
-# Project Title
+# Brain-i-hack
 
-One Paragraph of project description goes here
+
 
 ## Getting Started
 

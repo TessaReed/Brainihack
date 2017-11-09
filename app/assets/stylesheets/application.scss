@@ -67,10 +67,6 @@ h4.profession-title { margin-left: 20px;
 }
 // styling images
 
-img.hackathon-img {
-  height: 40px;
-}
-
 img.icon {
   height: 30px;
 }
@@ -88,9 +84,8 @@ img.profile {
 img.hackathon-img {
   display: block;
   margin: 0 auto;
-  border:1px solid black;
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   margin-top: 40px;
 }
@@ -115,11 +110,14 @@ img.logo_small {
 }
 
 .card-hackathon {
+  display: block;
+  margin: 0 auto;
   margin-bottom: 30px;
   margin-top: 40px;
   border: 1px solid;
   border-color: #533A71;
   border-radius: 5px;
+  width: 30rem;
 }
 
 
@@ -179,6 +177,10 @@ ul {
   text-align: center;
   width: 200px;
   border-radius: 10px;
+}
+
+.btn.btn-secondary:hover {
+  color: red;
 }
 
 .btn-outline-secondary {
