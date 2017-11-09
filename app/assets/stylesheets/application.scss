@@ -76,7 +76,12 @@ h3 {
 
 h4.profession-title {
     margin-left: 20px;
-    color: #F0F465;
+    color: #533A71;
+}
+
+// this is for the devise edit/back links on profile page
+a {
+    color: #533A71;
 }
 // styling images
 
@@ -87,11 +92,12 @@ img.icon {
 img.profile {
   display: block;
   margin: 0 auto;
-  border:1px solid black;
+  border:1px;
+  border-color: #533A71;
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  margin-top: 25px;
+  margin-top: -10px;
 }
 
 img.hackathon-img {
