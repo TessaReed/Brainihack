@@ -3,9 +3,10 @@
     body {background-color: #9CEC5B;}
   </style>
 </head>
-<div class="center">
+<div class = "sign-in-center">
   <%=image_tag 'logo_small.png', :class => "logo"%>
 
+<div class = "form-sign-in">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
@@ -33,4 +34,5 @@
         <%= render "devise/shared/links" %>
       </div>
     <% end %>
+  </div>
 </div>

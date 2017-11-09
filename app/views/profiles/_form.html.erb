@@ -10,7 +10,6 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name, id: :profile_form %>
@@ -35,8 +34,10 @@
     <%= form.label :profession %>
     <%= form.text_field :profession, id: :profile_form %>
   </div>
-
-  <div class="actions">
+  <button type="button" class="btn profile">
+    <div class="actions">
     <%= form.submit %>
+    </div>
+  </button>
   </div>
 <% end %>
