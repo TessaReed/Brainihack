@@ -87,5 +87,5 @@ Note, To deploy to heroku its very important to run 'heroku db:migrate' this mig
 
 ## Acknowledgments
 
-* Thank you Coder Academy. :) Especially Luke for putting up with an infinite loop of questions!
+* Thank you Coder Academy :) for sharing all your wisdom and answering my infinite loop of questions!
 * Thank you to all the contributors to the fantastic gems that I used (listed above).

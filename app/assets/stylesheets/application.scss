@@ -184,6 +184,12 @@ ul {
   list-style: none;
 }
 
+// team members
+
+.center-team_members {
+    text-align: center;
+    margin-top: 80px;
+}
 // styling for messages
 
 .messages-list {
@@ -227,10 +233,9 @@ button:focus { outline: none; }
 
 .btn-outline-secondary {
     background-color: #F0F465;
-    border-color: #F0F465;
+    border-color: #533A71;
     display: block;
     margin: 0 auto;
-    color: #533A71;
     width: 200px;
 }
 
@@ -241,6 +246,7 @@ button:focus { outline: none; }
 
 .btn outline-secondary-profile {
     background-color: #533A71;
+
 }
 
 button.btn.profile {
