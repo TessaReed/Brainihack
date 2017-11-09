@@ -11,7 +11,7 @@ The bellow summary explains the problem and solutions.  [summary](https://docs.g
 ![Trello board link:](https://trello.com/b/YoR9berY/branihack)
 
 - 2 - I roughly created a workflow diagram of the user journey/s. This helped me visualise how the user was going to interact with Brain-i-hack and distinguish the hackathon host journey from the hackathon participants.
-![User journey/s]()
+![User journey/s](https://github.com/TessaReed/Brainihack/blob/master/app/assets/images/readme/user_journey.jpg)
 
 
 - 3 - I used Mockplus to create my Wireframes and mock designs.
@@ -61,41 +61,31 @@ These instructions will get you an idea of the features I have implemented in th
 
 I used the following gems to create Brain-i-hack:
 
-1. Devise
-Devise is used to create user authentication. Devise allows you to create a user and add sign up and login.
+1. Devise is used to create user authentication. Devise allows you to create a user and add sign up and login.
 
-2. Shrine
-Shrine is used to upload image files. It supports uploading, processing and deleting IO objects.
+2. Shrine is used to upload image files. It supports uploading, processing and deleting IO objects.
 
-3. Stripe
-Stripe allowed me to quickly integrate checkout into my application.
+3. Stripe allowed me to quickly integrate checkout into my application.
 
-4. Geocoder
-I used the Geocoder API to allow the possibility of showing the location of a hackathon, although this information is not essentiality for the usability of the app, as the user does not need to visit a location to participate in most cases. However I wanted to give Hackathon hosts the option of hosting a hackathon in a location.
+4. I used the Geocoder API to allow the possibility of showing the location of a hackathon, although this information is not essentiality for the usability of the app, as the user does not need to visit a location to participate in most cases. However I wanted to give Hackathon hosts the option of hosting a hackathon in a location.
 
-5. Cloudinary
-I used Cloudinary to manage my images in the cloud. This API is a great way to store images.
+5. I used Cloudinary to manage my images in the cloud. This API is a great way to store images.
 
 
 ### Features
 
-- image uploading
-- search engine
-- internal messaging
-- create profile
-- create hackahon
+- Image uploading
+- Search engine
+- Internal messaging
+- Create profile/hackathons.
+- View location on google map.
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
 Brain-i-hack is deployed on Heroku.
-To deploy to heroku its very important to run 'heroku db:migrate' this migrates the database in heroku.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+Note, To deploy to heroku its very important to run 'heroku db:migrate' this migrates the database in heroku.
 
 ## Acknowledgments
 
 * Thank you Coder Academy. :) Especially Luke for putting up with an infinite loop of questions!
-* Thank you to all the contributors to the fantastic gems I used (listed above).
+* Thank you to all the contributors to the fantastic gems that I used (listed above).
