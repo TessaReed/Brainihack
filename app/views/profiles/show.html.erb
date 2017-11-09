@@ -3,7 +3,11 @@
 <%= render 'messages' %>
 
 <div class="card-profile">
-  <img class ="profile" src="<%= @profile.avatar_url %>">
+  <% if @profile.avatar_data.nil? %>
+       <%=image_tag('alien.png', class: "profile")%>
+  <% else %>
+    <img class ="profile" src="<%= @profile.avatar_url %>"></div>
+  <% end %>
   <div class="card-block">
     <h4 class="profession-title">
       <%= @profile.profession %> </h4>

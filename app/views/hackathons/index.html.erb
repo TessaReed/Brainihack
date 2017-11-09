@@ -5,6 +5,7 @@
     <%= text_field_tag :term, params[:term] %>
     <%= submit_tag 'Search', name: nil %>
   <% end %>
+  
   <% @hackathons.each do |hackathon| %>
   <div class="card-hackathon">
     <img class="hackathon-img" src="<%= hackathon.avatar_url %>" alt="Card image cap">
