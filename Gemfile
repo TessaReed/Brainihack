@@ -5,7 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-#
+
+ruby "~> 2.4.0"
+
 gem 'dotenv-rails', groups: [:development, :test]
 #allows you to show a location on a map.
 gem 'geocoder'
