@@ -5,15 +5,20 @@
     <%= text_field_tag :term, params[:term] %>
     <%= submit_tag 'Search', name: nil %>
   <% end %>
-  
+
   <% @hackathons.each do |hackathon| %>
   <div class="card-hackathon">
-    <img class="hackathon-img" src="<%= hackathon.avatar_url %>" alt="Card image cap">
     <div class="card-body">
+    <% if hackathon.avatar_data.nil? %>
+      <%=image_tag('hackathon.jpg', class: "hackathon-img")%>
+    <% else %>
+      <img class ="hackathon-img" src="<%= hackathon.avatar_url %>"></div>
+    <% end %>
       <h4 class="card-title">Name: <%= hackathon.name %></h4>
       <p class="card-text">Reward: <%= hackathon.reward %></p>
       <div class="btn btn-outline-secondary">
       <%= link_to "Join Hackathon", hackathon_path(id: hackathon.id) %>
+      <br>
       </div>
     </div>
   </div>

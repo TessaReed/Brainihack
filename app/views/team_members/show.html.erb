@@ -20,25 +20,30 @@
   <%= @team_member.role %>
 </p>
 
-<%= form_tag charges_path do %>
-  <article>
-    <% if flash[:error].present? %>
-      <div id="error_explanation">
-        <p><%= flash[:error] %></p>
-      </div>
-    <% end %>
-    <label class="amount">
-      <span>Amount: $5.00</span>
-    </label>
-  </article>
-
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="A month's subscription"
-          data-amount="500"
-          data-locale="auto"></script>
-<% end %>
+ <% if user_signed_in? && current_user.user_id.profile.team_id? %>
+  <%= form_tag charges_path do %>
+    <article>
+      <% if flash[:error].present? %>
+        <div id="error_explanation">
+          <p><%= flash[:error] %></p>
+        </div>
+      <% end %>
+      <label class="amount">
+        <span>Amount: $5.00</span>
+      </label>
+    </article>
 
 
-<%= link_to 'Edit', edit_team_member_path(@team_member) %> |
-<%= link_to 'Back', team_members_path %>
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-description="A month's subscription"
+            data-amount="500"
+            data-locale="auto"></script>
+  <% end %>
+
+  <% else%>
+  <p> you are not allowed to pay people! </p>
+  <%end %>
+
+  <%= link_to 'Edit', edit_team_member_path(@team_member) %> |
+  <%= link_to 'Back', team_members_path %>
