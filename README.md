@@ -1,18 +1,34 @@
 #Tessa Reed
 
-#Deliverables
+#The problem and solution.
+
 Design Documentation
-Demonstrate your ability to break down the problem and design a solution.
 
-- 1 - One page summary of your application including problem definition, solution.
-* [Summary](https://docs.google.com/a/ait.nsw.edu.au/document/d/1V19cIZnVO7e-gunfpClTeKZ7UDwJEamIKU0qbVJqK9U/edit?usp=sharing)
+[Summary](https://docs.google.com/a/ait.nsw.edu.au/document/d/1V19cIZnVO7e-gunfpClTeKZ7UDwJEamIKU0qbVJqK9U/edit?usp=sharing)
 
 
-- 2 - User stories for the whole application.
-- 3 - A workflow diagram of the user journey/s.
-- 4 - Wireframes for at least 5 screens.
-- 5 - Entity Relationship Diagram (ERD).
-- 6 - Project plan and estimation.
+- 2 - I wrote user stories on trello to create my product narrative, this helped me fully unpack the desired functionality of Brain-i-hack.
+![User Stories]()
+
+- 3 - I roughly created a workflow diagram of the user journey/s. This helped me visualise how the user was going to interact with Brain-i-hack and distinguish the hackathon host journey from the hackathon participants.
+
+
+
+- 4 - I used Mockplus to create my Wireframes and mock designs.
+![login]()
+![Signup]()
+![Create_profile]()
+![View_hackathon]()
+![Assigned_team]()
+![Team_home]()
+![List_hackathons]()
+![Reward_team]()
+![Upload_work]()
+
+- 5 - Entity Relationship Diagram (ERD)
+![ERD]()
+
+- 6 - Project plan and estimation: We were given two weeks to complete a rails two-sided market place. This time frame includes the ideation, planning and building the rails application. Recognising the importance of detailed planning I used the first week to create user stories, my ERD, Wireframes and mock designs. I then used the second week to code the app.
 
 
 
@@ -32,12 +48,7 @@ Demonstrate Ruby on Rails development skills.
 - [X] Your app will have some type of file uploading capability (eg. images).
 - [X] Your app will have authentication (eg. Devise, must have full functionality in place).
 - [ ] Your app will have authorisation (users have restrictions on what they can see and edit).
-- [ ] Your app will have an admin dashboard for the admin user to administrate the site.
-- [ ] Document your application with a README that explains how to setup, configure and use your application.
-
-
-
-
+- [X] Document your application with a README that explains how to setup, configure and use your application.
 
 
 # Brain-i-hack
@@ -46,77 +57,41 @@ Demonstrate Ruby on Rails development skills.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a rough idea of how to copy the project.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+I used the following gems to create Brain-i-hack:
 
-```
-Give examples
-```
+1. Devise
+Devise is used to create user authentication. Devise allows you to create a user and add sign up and login.
 
-### Installing
+2. Shrine
+Shrine is used to upload image files. It supports uploading, processing and deleting IO objects.
 
-A step by step series of examples that tell you have to get a development env running
+3. Stripe
+Stripe allowed me to quickly integrate checkout into my application.
 
-Say what the step will be
+4. Geocoder
+I used the Geocoder API to allow the possibility of showing the location of a hackathon, although this information is not essentiality for the usability of the app, as the user does not need to visit a location to participate in most cases. However I wanted to give Hackathon hosts the option of hosting a hackathon in a location.
 
-```
-Give the example
-```
+5. Cloudinary
+I used Cloudinary to manage my images in the cloud. This API is a great way to store images.
 
-And repeat
 
-```
-until finished
-```
+### Features
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+- image uploading
+- search engine
+- internal messaging
+- create profile
+- create hackahon
 
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+Brain-i-hack is deployed on Heroku.
+To deploy to heroku its very important to run 'heroku db:migrate' this migrates the database in heroku.
 
 ## License
 
