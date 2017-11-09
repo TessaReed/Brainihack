@@ -1,6 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-  <h1>Hackathons</h1>
   <%= form_tag(hackathons_path, method: :get) do %>
     <%= text_field_tag :term, params[:term] %>
     <%= submit_tag 'Search', name: nil %>

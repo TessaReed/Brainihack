@@ -13,40 +13,42 @@
 
   <div class="field">
     <%= form.label :avatar_data %>
-    <%= form.file_field :avatar, id: :hackathon_avatar_data %>
+    <%= form.file_field :avatar, id: :hackathon_form %>
   </div>
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :hackathon_name %>
+    <%= form.text_field :name, id: :hackathon_form %>
   </div>
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description, id: :hackathon_description %>
+    <%= form.text_area :description, id: :hackathon_form %>
   </div>
 
   <div class="field">
     <%= form.label :reward %>
-    <%= form.text_field :reward, id: :hackathon_reward %>
+    <%= form.text_field :reward, id: :hackathon_form %>
   </div>
 
   <div class="field">
     <%= form.label :max_team_count %>
-    <%= form.number_field :max_team_count, id: :hackathon_max_team_count %>
+    <%= form.number_field :max_team_count, id: :hackathon_form %>
   </div>
 
   <div class="field">
     <%= form.label :date_end %>
-    <%= form.datetime_select :date_end, id: :hackathon_date_end %>
+    <%= form.datetime_select :date_end, id: :hackathon_form %>
   </div>
 
   <p>
     <%= form.label :address %><br />
-    <%= form.text_field :address %>
+    <%= form.text_field :address, id: :hackathon_form %>
   </p>
 
+  <button type="button" class="btn profile">
   <div class="actions">
     <%= form.submit %>
   </div>
+</button>
 <% end %>

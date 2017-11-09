@@ -59,6 +59,18 @@ font {
 
 }
 
+#hackathon_form {
+  border-color: deepskyblue;
+}
+
+#hackathon_date_end_1i, #hackathon_date_end_2i, #hackathon_date_end_3i, #hackathon_date_end_4i, #hackathon_date_end_5i {
+  border-color: deepskyblue;
+}
+
+#team_name {
+  border-color: deepskyblue;
+}
+
 .logo {
   display: block;
   margin: auto;
@@ -69,6 +81,7 @@ font {
 
 h1 {
   font-size: 1.5rem;
+  color: #533A71;
 }
 h3 {
   font-size: 1rem;
@@ -168,60 +181,68 @@ ul {
 
 
 .message-sent {
-  position: relative;
-  background-color: #D9EDF7;
-  border-color: #BCE8F1;
-  margin: 5px 20px;
-  padding: 10px;
-  float: right;
+    position: relative;
+    background-color: #D9EDF7;
+    border-color: #BCE8F1;
+    margin: 5px 20px;
+    padding: 10px;
+    float: right;
 }
 
 
 .message-received {
-  background-color: #F1F0F0;
-  border-color: #EEEEEE;
-  margin: 5px 20px;
-  padding: 10px;
-  float: left;
+    background-color: #F1F0F0;
+    border-color: #EEEEEE;
+    margin: 5px 20px;
+    padding: 10px;
+    float: left;
 }
 
 // styling buttons
 button:focus { outline: none; }
 
 .btn-secondary {
-  color: #F0F465;
-  background-color: #9CEC5B;
-  border-color: #F0F465;
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  width: 200px;
-  border-radius: 10px;
+    color: #F0F465;
+    background-color: #9CEC5B;
+    border-color: #F0F465;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+    border-radius: 10px;
 }
 
 .btn-outline-secondary {
-  background-color: #F0F465;
-  border-color: #F0F465;
-  display: block;
-  margin: 0 auto;
-  color: #533A71;
-  width: 200px;
+    background-color: #F0F465;
+    border-color: #F0F465;
+    display: block;
+    margin: 0 auto;
+    color: #533A71;
+    width: 200px;
 }
 
 .btn-secondary:hover {
-  color: #533A71;
-  background-color: #533A71;
+    color: #533A71;
+    background-color: #533A71;
 }
 
 .btn outline-secondary-profile {
-  background-color: #533A71;
+    background-color: #533A71;
 }
 
 button.btn.profile {
-  margin-top: 80px;
-  width: 200px;
-  background-color: #F0F465;
-  border-color: deepskyblue;
+    margin-top: 80px;
+    width: 200px;
+    background-color: #F0F465;
+    border-color: deepskyblue;
+}
+
+
+button.btn.profile-team {
+    margin-top: 250px;
+    width: 200px;
+    background-color: #F0F465;
+    border-color: deepskyblue;
 }
 
 #formItem label {
