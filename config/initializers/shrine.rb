@@ -14,8 +14,8 @@ require "shrine/storage/cloudinary"
 
 Cloudinary.config(
   cloud_name: "dshckrmfg",
-  api_key:ENV["CLOUDINARY_API"],
-  api_secret:ENV["CLOUDINARY_SECRET"]
+  api_key: ENV["CLOUDINARY_API"],
+  api_secret: ENV["CLOUDINARY_SECRET"]
 )
 
 Shrine.storages = {
