@@ -1,8 +1,21 @@
 #Tessa Reed
 
+## Brain-i-hack
+
+Brain-i-hack is an online platform that connects hackathon hosts and hackathon participators in a two sided market-place. A user can sign up and join a hackathon, as well as create their own hackathons for others to join. Each hackathon presents a reward, this reward is won by one team and the reward is split equally between the three  members and paid by the hackathon creator.
+
+Each Hackathon is built up of teams, the hackathon creator assigns the team names for their hackathons, creating various empty teams. A user then can browse Hackathons and teams and choose a team according to which role they want to participate in the hackathon as, this can be one of ‘Hustler, Hipster or Hacker’.  
+
+A user can communicate with their other team members through direct messaging on the app, a hackathon participator is rewarded by the hackathon creator through the app.
+
+Brain-i-hack is an online platform that allows individuals from all over to collaborate and solve complex problems presented by the world’s most innovative companies.
+
+The hackathon participators benefit from this as they can win rewards, meet new people and become known to leading companies in the tech industry.
+
+The companies benefit from this service as they can crowd-source various ideas and solutions to their challenges. More brains, more ideas more exiting and innovative solutions.
 #The problem and solution.
 
-The bellow summary explains the problem and solutions.  [summary](https://docs.google.com/a/ait.nsw.edu.au/document/d/1V19cIZnVO7e-gunfpClTeKZ7UDwJEamIKU0qbVJqK9U/edit?usp=sharing)
+The word document linked to bellow gives a summary of the problem and solutions.  [summary](https://docs.google.com/a/ait.nsw.edu.au/document/d/1V19cIZnVO7e-gunfpClTeKZ7UDwJEamIKU0qbVJqK9U/edit?usp=sharing)
 
 
 - 1 - I wrote user stories on trello to create my product narrative, this helped me fully unpack the desired functionality of Brain-i-hack.
@@ -50,8 +63,6 @@ Demonstrate Ruby on Rails development skills.
 - [ ] Your app will have authorisation (users have restrictions on what they can see and edit).
 - [X] Document your application with a README that explains how to setup, configure and use your application.
 
-
-# Brain-i-hack
 
 ## Getting Started
 
